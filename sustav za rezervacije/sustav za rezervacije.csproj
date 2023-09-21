@@ -46,14 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ReservationInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReservationInputForm.Designer.cs">
+      <DependentUpon>ReservationInputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReservationMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ReservationMainForm.Designer.cs">
       <DependentUpon>ReservationMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm.Designer.cs">
+      <DependentUpon>TimeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ReservationInputForm.resx">
+      <DependentUpon>ReservationInputForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReservationMainForm.resx">
       <DependentUpon>ReservationMainForm.cs</DependentUpon>
     </EmbeddedResource>
