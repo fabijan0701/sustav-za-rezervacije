@@ -1,6 +1,6 @@
 ﻿namespace sustav_za_rezervacije.Forms
 {
-    partial class ReservationDataForm
+    partial class NewReservationFrom
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(350, 79);
+            this.label5.Location = new System.Drawing.Point(368, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 23;
@@ -55,14 +55,14 @@
             // txtBrojOsobne
             // 
             this.txtBrojOsobne.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtBrojOsobne.Location = new System.Drawing.Point(486, 79);
+            this.txtBrojOsobne.Location = new System.Drawing.Point(504, 88);
             this.txtBrojOsobne.Name = "txtBrojOsobne";
             this.txtBrojOsobne.Size = new System.Drawing.Size(198, 27);
             this.txtBrojOsobne.TabIndex = 22;
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(564, 336);
+            this.btnOdustani.Location = new System.Drawing.Point(582, 345);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(132, 48);
             this.btnOdustani.TabIndex = 21;
@@ -71,7 +71,7 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(416, 336);
+            this.btnSpremi.Location = new System.Drawing.Point(434, 345);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(132, 48);
             this.btnSpremi.TabIndex = 20;
@@ -82,7 +82,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(378, 231);
+            this.label4.Location = new System.Drawing.Point(396, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 19;
@@ -91,7 +91,7 @@
             // txtKontakt
             // 
             this.txtKontakt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtKontakt.Location = new System.Drawing.Point(486, 229);
+            this.txtKontakt.Location = new System.Drawing.Point(504, 238);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(198, 27);
             this.txtKontakt.TabIndex = 18;
@@ -100,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(378, 178);
+            this.label3.Location = new System.Drawing.Point(396, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 17;
@@ -109,7 +109,7 @@
             // txtPrezime
             // 
             this.txtPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrezime.Location = new System.Drawing.Point(486, 176);
+            this.txtPrezime.Location = new System.Drawing.Point(504, 185);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(198, 27);
             this.txtPrezime.TabIndex = 16;
@@ -118,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(404, 128);
+            this.label2.Location = new System.Drawing.Point(422, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 20);
             this.label2.TabIndex = 15;
@@ -127,7 +127,7 @@
             // txtIme
             // 
             this.txtIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtIme.Location = new System.Drawing.Point(486, 125);
+            this.txtIme.Location = new System.Drawing.Point(504, 134);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(198, 27);
             this.txtIme.TabIndex = 14;
@@ -136,7 +136,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(52, 32);
+            this.label1.Location = new System.Drawing.Point(87, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 22);
             this.label1.TabIndex = 13;
@@ -147,12 +147,12 @@
             this.lstStol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lstStol.FormattingEnabled = true;
             this.lstStol.ItemHeight = 22;
-            this.lstStol.Location = new System.Drawing.Point(56, 68);
+            this.lstStol.Location = new System.Drawing.Point(91, 76);
             this.lstStol.Name = "lstStol";
             this.lstStol.Size = new System.Drawing.Size(253, 334);
             this.lstStol.TabIndex = 12;
             // 
-            // ReservationDataForm
+            // NewReservationFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,8 +169,8 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstStol);
-            this.Name = "ReservationDataForm";
-            this.Text = "Unos podataka";
+            this.Name = "NewReservationFrom";
+            this.Text = "NewReservationFrom";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sustav_za_rezervacije.Forms;
 
 namespace sustav_za_rezervacije
 {
@@ -16,7 +17,7 @@ namespace sustav_za_rezervacije
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.ReservationMainForm());
+            Application.Run(new ReservationMainForm());
         }
     }
 }
