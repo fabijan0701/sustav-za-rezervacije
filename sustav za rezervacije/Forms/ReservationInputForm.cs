@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sustav_za_rezervacije.Forms
 {
-    public partial class NewReservationFrom : Form
+    public partial class ReservationInputForm : Form
     {
-        public NewReservationFrom()
+        public ReservationInputForm()
         {
             InitializeComponent();
         }
