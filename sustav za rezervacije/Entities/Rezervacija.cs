@@ -70,14 +70,14 @@ namespace sustav_za_rezervacije.Entities
         /// <param name="pocetak"></param>
         /// <param name="kraj"></param>
         /// <returns></returns>
-        //public static Rezervacija Trazi(int broj, DateTime pocetak, DateTime kraj)
-        //{
-        //    foreach (Rezervacija r in Connection.ŞQL_Rezervacije(pocetak, kraj))
-        //    {
-        //        if (r.broj == broj) return r;
-        //    }
-        //    return null;
-        //}
+        public static Rezervacija Trazi(int broj, DateTime pocetak, DateTime kraj)
+        {
+            foreach (Rezervacija r in Project.DataHandler.DohvatiRezervacije(pocetak, kraj))
+            {
+                if (r.broj == broj) return r;
+            }
+            return null;
+        }
 
         /// <summary>
         /// /// Vraca instancu rezervacije prema parametrima koje prima, te null vrijednost
@@ -87,14 +87,14 @@ namespace sustav_za_rezervacije.Entities
         /// <param name="pocetak"></param>
         /// <param name="kraj"></param>
         /// <returns></returns>
-        //public static Rezervacija Trazi(Gost g, DateTime pocetak, DateTime kraj)
-        //{
-        //    foreach (Rezervacija r in Connection.ŞQL_Rezervacije(pocetak, kraj))
-        //    {
-        //        if (r.Gost.BrojOsobne == g.BrojOsobne) return r;
-        //    }
-        //    return null;
-        //}
+        public static Rezervacija Trazi(Gost g, DateTime pocetak, DateTime kraj)
+        {
+            foreach (Rezervacija r in Project.DataHandler.DohvatiRezervacije(pocetak, kraj))
+            {
+                if (r.Gost.BrojOsobne == g.BrojOsobne) return r;
+            }
+            return null;
+        }
 
         /// <summary>
         /// Vraca string koji ispisuje instancu klase rezervacija

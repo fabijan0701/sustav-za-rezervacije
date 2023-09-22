@@ -204,6 +204,7 @@
             this.btnDalje.TabIndex = 40;
             this.btnDalje.Text = "Dalje";
             this.btnDalje.UseVisualStyleBackColor = true;
+            this.btnDalje.Click += new System.EventHandler(this.btnDalje_Click);
             // 
             // btnOdustani
             // 
@@ -213,6 +214,7 @@
             this.btnOdustani.TabIndex = 41;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // TimeForm
             // 

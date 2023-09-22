@@ -40,6 +40,11 @@ namespace sustav_za_rezervacije.Entities
             return null;
         }
 
+        public override string ToString()
+        {
+            return $"{this.Broj} - {this.Pozicija} - {this.Klasa}";
+        }
+
         /// <summary>
         /// Ova metoda testira nalazi li se bilo koji od dva broja unutar intervala,
         ///  metoda je važna za kasniju konstrukciju upita vezanih za slobodne stolove u zadanom terminu
