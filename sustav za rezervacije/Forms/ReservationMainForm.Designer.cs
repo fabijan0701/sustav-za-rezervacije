@@ -118,6 +118,7 @@
             this.Controls.Add(this.lstRezervacije);
             this.Name = "ReservationMainForm";
             this.Text = "ReservationMainForm";
+            this.Load += new System.EventHandler(this.ReservationMainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

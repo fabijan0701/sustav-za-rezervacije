@@ -9,3 +9,19 @@ C:\Users\Ante\Desktop\sustav za rezervacije\sustav za rezervacije\obj\Debug\sust
 C:\Users\Ante\Desktop\sustav za rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.CoreCompileInputs.cache
 C:\Users\Ante\Desktop\sustav za rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.exe
 C:\Users\Ante\Desktop\sustav za rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.pdb
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\bin\Debug\sustav za rezervacije.exe.config
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\bin\Debug\sustav za rezervacije.exe
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\bin\Debug\sustav za rezervacije.pdb
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.AssemblyReference.cache
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav_za_rezervacije.Forms.ReservationInputForm.resources
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav_za_rezervacije.Forms.ReservationMainForm.resources
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav_za_rezervacije.Forms.TimeForm.resources
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav_za_rezervacije.Properties.Resources.resources
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.GenerateResource.cache
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.CoreCompileInputs.cache
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.exe
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.pdb
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\bin\Debug\nunit.framework.dll
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\bin\Debug\nunit.framework.xml
+C:\Users\Ante\Desktop\sustav-za-rezervacije\sustav za rezervacije\obj\Debug\sustav za rezervacije.csproj.CopyComplete

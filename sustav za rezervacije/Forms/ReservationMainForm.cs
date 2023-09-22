@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace sustav_za_rezervacije.Forms
 {
@@ -15,6 +16,11 @@ namespace sustav_za_rezervacije.Forms
         public ReservationMainForm()
         {
             InitializeComponent();
+        }
+
+        private void ReservationMainForm_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(new DataHandler().UcitajPodatke().ToString());
         }
     }
 }
