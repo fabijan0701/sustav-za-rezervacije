@@ -100,5 +100,29 @@ namespace sustav_za_rezervacije.Forms
             }
             MessageBox.Show(msg);
         }
+
+        private void btnUkloni_Click(object sender, EventArgs e)
+        {
+            if (lstRezervacije.SelectedItem == null)
+            {
+                MessageBox.Show("Rezervacija nije odabrana!");
+                return;
+            }
+
+            string[] parts = lstRezervacije.SelectedItem.ToString().Split('\t');
+            int brojRez = int.Parse(parts[0]);
+
+            Project.DataHandler.ObrisiRezervaciju(brojRez);
+            Project.DataHandler.PovecajBroj();
+            Project.DataHandler.AzurirajPodatke();
+            
+            DateTime t = datePicker.Value;
+            string date = String.Format("{0}-{1}-{2} 00:00:00", t.Year, t.Month, t.Day);
+
+            DateTime pocetak = DateTime.Parse(date);
+            DateTime kraj = pocetak.AddHours(24);
+            List<Rezervacija> rezervacije = Project.DataHandler.DohvatiRezervacije(pocetak, kraj);
+            IspisRezervacija(rezervacije);
+        }
     }
 }

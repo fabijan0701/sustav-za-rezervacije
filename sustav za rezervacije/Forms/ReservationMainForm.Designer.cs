@@ -78,6 +78,7 @@
             this.btnUkloni.TabIndex = 26;
             this.btnUkloni.Text = "Ukloni rezervaciju";
             this.btnUkloni.UseVisualStyleBackColor = true;
+            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
             // btnDodaj
             // 

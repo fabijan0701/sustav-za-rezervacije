@@ -200,7 +200,14 @@ namespace sustav_za_rezervacije
         {
             using (StreamWriter sw = File.AppendText($"{DataPath}/gost.txt"))
             {
-                sw.Write($"\n{g.BrojOsobne};{g.Ime};{g.Prezime}");
+                if (this.TablicaGosti.Count == 0)
+                {
+                    sw.Write($"{g.BrojOsobne};{g.Ime};{g.Prezime}");
+                }
+                else
+                {
+                    sw.Write($"\n{g.BrojOsobne};{g.Ime};{g.Prezime}");
+                }
             }
         }
 
@@ -208,22 +215,36 @@ namespace sustav_za_rezervacije
         {
             using (StreamWriter sw = File.AppendText($"{DataPath}/rezervacija.txt"))
             {
-                sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
+                if (this.TablicaRezervacija.Count == 0)
+                {
+                    sw.Write($"{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
+                }
+                else
+                {
+                    sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
+                }
             }
 
             using (StreamWriter sw = File.AppendText($"{DataPath}/rezervacija-gost.txt"))
             {
-                sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Kontakt}");
+                if (TablicaRezervacijaGost.Count == 0)
+                {
+                    sw.Write($"{r.Broj};{r.Gost.BrojOsobne};{r.Kontakt}");
+                }
+                else
+                {
+                    sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Kontakt}");
+                }
             }
         }
 
-        public void ObrisiRezervaciju(Rezervacija rez)
+        public void ObrisiRezervaciju(int broj)
         {
             using (StreamWriter sw = File.CreateText($"{DataPath}/rezervacija.txt"))
             {
                 foreach (Rezervacija r in this.TablicaRezervacija.Values)
                 {
-                    if (r.Broj != rez.Broj)
+                    if (r.Broj != broj)
                     {
                         sw.WriteLine($"{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
                     }
@@ -231,7 +252,23 @@ namespace sustav_za_rezervacije
             }
         }
 
+        public int DohvatiBroj()
+        {
+            using (StreamReader sr = File.OpenText($"{DataPath}/number.txt"))
+            {
+                int number = int.Parse(sr.ReadLine());
+                return number;
+            }
+        }
 
+        public void PovecajBroj()
+        {
+            int number = DohvatiBroj() + 1;
+            using (StreamWriter sr = File.CreateText($"{DataPath}/number.txt"))
+            {
+                sr.WriteLine(number);
+            }
+        }
         
     }
 }

@@ -20,7 +20,7 @@ namespace sustav_za_rezervacije
         {
             get
             {
-                return DataHandler.TablicaGosti.Count;
+                return DataHandler.DohvatiBroj();
             }
         }
     }
