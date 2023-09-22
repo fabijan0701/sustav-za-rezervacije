@@ -47,6 +47,7 @@
             this.btnInformacije.TabIndex = 29;
             this.btnInformacije.Text = "Informacije";
             this.btnInformacije.UseVisualStyleBackColor = true;
+            this.btnInformacije.Click += new System.EventHandler(this.btnInformacije_Click);
             // 
             // label1
             // 

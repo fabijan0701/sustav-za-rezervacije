@@ -124,5 +124,26 @@ namespace sustav_za_rezervacije.Forms
             List<Rezervacija> rezervacije = Project.DataHandler.DohvatiRezervacije(pocetak, kraj);
             IspisRezervacija(rezervacije);
         }
+
+        private void btnInformacije_Click(object sender, EventArgs e)
+        {
+            if (lstRezervacije.SelectedItem == null)
+            {
+                MessageBox.Show("Rezervacija nije odabrana!");
+                return;
+            }
+
+            string[] parts = lstRezervacije.SelectedItem.ToString().Split('\t');
+            int brojRez = int.Parse(parts[0]);
+
+            DateTime t = datePicker.Value;
+            string date = String.Format("{0}-{1}-{2} 00:00:00", t.Year, t.Month, t.Day);
+
+            DateTime pocetak = DateTime.Parse(date);
+            DateTime kraj = pocetak.AddHours(24);
+
+            Rezervacija r = Rezervacija.Trazi(brojRez, pocetak, kraj);
+            MessageBox.Show(r.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
