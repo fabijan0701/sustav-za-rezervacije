@@ -20,7 +20,14 @@ namespace sustav_za_rezervacije.Forms
 
         private void ReservationMainForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(new DataHandler().UcitajPodatke().ToString());
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e) // Test
+        {
+            DataHandler handler = new DataHandler();
+            handler.DodajGosta(new Entities.Gost(1231123, "Jure", "Jurić"));
+            MessageBox.Show("Dodano");
         }
     }
 }

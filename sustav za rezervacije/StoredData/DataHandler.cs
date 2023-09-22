@@ -161,5 +161,76 @@ namespace sustav_za_rezervacije
 
             return true;
         }
+    
+        public List<Rezervacija> DohvatiRezervacije(DateTime pocetak, DateTime kraj)
+        {
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
+
+            foreach (Rezervacija r in this.TablicaRezervacija.Values)
+            {
+                if (r.Pocetak.CompareTo(pocetak) >= 0 && r.Kraj.CompareTo(kraj) <= 0)
+                {
+                    rezervacije.Add(r);
+                }
+            } 
+            return rezervacije;
+        }
+
+
+        public List<Stol> DostupniStolovi(DateTime pocetak, DateTime kraj)
+        {
+            List<Rezervacija> rezervacije = DohvatiRezervacije(pocetak, kraj);
+            List<Stol> povrat = new List<Stol>();
+
+            foreach (Stol s in TablicaStolova.Values)
+            {
+                if (!Rezervacija.SadrziStol(rezervacije, s))
+                {
+                    povrat.Add(s);
+                }
+            }
+
+            return povrat;
+        }
+
+        public List<Stol> Stolovi { get => this.TablicaStolova.Values.ToList(); }
+
+        public void DodajGosta(Gost g)
+        {
+            using (StreamWriter sw = File.AppendText($"{DataPath}/gost.txt"))
+            {
+                sw.Write($"\n{g.BrojOsobne};{g.Ime};{g.Prezime}");
+            }
+        }
+
+        public void DodajRezervaciju(Rezervacija r)
+        {
+            using (StreamWriter sw = File.AppendText($"{DataPath}/rezervacija.txt"))
+            {
+                sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
+            }
+
+            using (StreamWriter sw = File.AppendText($"{DataPath}/rezervacija-gost.txt"))
+            {
+                sw.Write($"\n{r.Broj};{r.Gost.BrojOsobne};{r.Kontakt}");
+            }
+        }
+
+        public void ObrisiRezervaciju(Rezervacija rez)
+        {
+            using (StreamWriter sw = File.CreateText($"{DataPath}/rezervacija.txt"))
+            {
+                foreach (Rezervacija r in this.TablicaRezervacija.Values)
+                {
+                    if (r.Broj != rez.Broj)
+                    {
+                        sw.WriteLine($"{r.Broj};{r.Gost.BrojOsobne};{r.Stol.Broj};{r.Pocetak};{r.Kraj}");
+                    }
+                }
+            }
+        }
+
+
+        
     }
 }

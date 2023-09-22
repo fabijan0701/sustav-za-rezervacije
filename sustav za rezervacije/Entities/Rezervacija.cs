@@ -113,5 +113,17 @@ namespace sustav_za_rezervacije.Entities
 
             return br + "\n" + gost + "\n" + stol + "\n" + datumi;
         }
+
+        public static bool SadrziStol(List<Rezervacija> lista, Stol s)
+        {
+            foreach(Rezervacija r in lista)
+            {
+                if (r.Stol.Broj == s.Broj)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
