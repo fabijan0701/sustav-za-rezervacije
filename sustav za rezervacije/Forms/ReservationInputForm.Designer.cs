@@ -32,7 +32,7 @@
             this.txtIme = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtKontakt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSpremi = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.lstStol = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,15 +74,16 @@
             this.txtKontakt.Size = new System.Drawing.Size(198, 28);
             this.txtKontakt.TabIndex = 27;
             // 
-            // button1
+            // btnSpremi
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(437, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 46);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Spremi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSpremi.Location = new System.Drawing.Point(437, 320);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(119, 46);
+            this.btnSpremi.TabIndex = 28;
+            this.btnSpremi.Text = "Spremi";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnOdustani
             // 
@@ -93,6 +94,7 @@
             this.btnOdustani.TabIndex = 29;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // lstStol
             // 
@@ -108,7 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(372, 83);
+            this.label2.Location = new System.Drawing.Point(355, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 22);
             this.label2.TabIndex = 31;
@@ -118,7 +120,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(429, 135);
+            this.label3.Location = new System.Drawing.Point(412, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 22);
             this.label3.TabIndex = 32;
@@ -128,7 +130,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(402, 186);
+            this.label4.Location = new System.Drawing.Point(385, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 22);
             this.label4.TabIndex = 33;
@@ -138,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(407, 238);
+            this.label5.Location = new System.Drawing.Point(390, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 22);
             this.label5.TabIndex = 34;
@@ -166,13 +168,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lstStol);
             this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.txtKontakt);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.txtBrojOsobne);
             this.Name = "ReservationInputForm";
             this.Text = "Nova rezervacija";
+            this.Load += new System.EventHandler(this.ReservationInputForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,7 +186,7 @@
         private System.Windows.Forms.TextBox txtIme;
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtKontakt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.ListBox lstStol;
         private System.Windows.Forms.Label label2;

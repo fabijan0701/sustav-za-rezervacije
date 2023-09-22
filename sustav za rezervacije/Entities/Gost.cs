@@ -38,24 +38,35 @@ namespace sustav_za_rezervacije.Entities
         /// <summary>
         /// Uz pomoć baze podataka vraca popis svih gostiju
         /// </summary>
-        // public static List<Gost> Gosti { return null }
+        public static List<Gost> Gosti
+        {
+            get
+            { 
+                List<Gost> povratnaLista = new List<Gost>();
+                foreach (Gost g in Project.DataHandler.TablicaGosti.Values)
+                {
+                    povratnaLista.Add(g);
+                }
+                return povratnaLista;
+            }
+        }
 
-        /// <summary>
+        /// <summary>}
         /// Pretrazuje postoji li gost sa trazenim brojem osobne iskaznice, ako postoji vraća njegovu instancu
         /// </summary>
         /// <param name="brojOs"></param>
         /// <returns></returns>
-        //public static Gost Trazi(int brojOs)
-        //{
-        //    foreach (Gost g in Gosti)
-        //    {
-        //        if (g.BrojOsobne == brojOs)
-        //        {
-        //            return g;
-        //        }
-        //    }
-        //    return null;
-        //}
+        public static Gost Trazi(int brojOs)
+        {
+            foreach (Gost g in Gosti)
+            {
+                if (g.BrojOsobne == brojOs)
+                {
+                    return g;
+                }
+            }
+            return null;
+        }
 
         /// <summary>
         /// Vraca bool vrijednost koja ovisi o tome ima li gost rezervaciju u datom terminu
@@ -63,17 +74,17 @@ namespace sustav_za_rezervacije.Entities
         /// <param name="pocetak"></param>
         /// <param name="kraj"></param>
         /// <returns></returns>
-        //public bool UTerminu(DateTime pocetak, DateTime kraj)
-        //{
-        //    foreach (Rezervacija rez in Connection.ŞQL_Rezervacije(pocetak, kraj))
-        //    {
-        //        if (rez.Gost.BrojOsobne == BrojOsobne)
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
+        public bool UTerminu(DateTime pocetak, DateTime kraj)
+        {
+            foreach (Rezervacija rez in Project.DataHandler.DohvatiRezervacije(pocetak, kraj))
+            {
+                if (rez.Gost.BrojOsobne == BrojOsobne)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         /// <summary>
         /// Vraca bool vrijednost ovisno o tome je li uneseni format osobne iskaznice tocan

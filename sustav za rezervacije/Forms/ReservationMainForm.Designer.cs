@@ -35,7 +35,7 @@
             this.btnDodaj = new System.Windows.Forms.Button();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.lstRezervacije = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStolovi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInformacije
@@ -67,6 +67,7 @@
             this.btnIzlaz.TabIndex = 27;
             this.btnIzlaz.Text = "Izlaz";
             this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // btnUkloni
             // 
@@ -87,6 +88,7 @@
             this.btnDodaj.TabIndex = 25;
             this.btnDodaj.Text = "Dodaj rezervaciju";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // datePicker
             // 
@@ -100,27 +102,27 @@
             this.lstRezervacije.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lstRezervacije.FormattingEnabled = true;
             this.lstRezervacije.ItemHeight = 20;
-            this.lstRezervacije.Location = new System.Drawing.Point(49, 77);
+            this.lstRezervacije.Location = new System.Drawing.Point(33, 77);
             this.lstRezervacije.Name = "lstRezervacije";
             this.lstRezervacije.Size = new System.Drawing.Size(861, 504);
             this.lstRezervacije.TabIndex = 23;
             // 
-            // button1
+            // btnStolovi
             // 
-            this.button1.Location = new System.Drawing.Point(967, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 64);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStolovi.Location = new System.Drawing.Point(933, 329);
+            this.btnStolovi.Name = "btnStolovi";
+            this.btnStolovi.Size = new System.Drawing.Size(220, 44);
+            this.btnStolovi.TabIndex = 30;
+            this.btnStolovi.Text = "Svi stolovi";
+            this.btnStolovi.UseVisualStyleBackColor = true;
+            this.btnStolovi.Click += new System.EventHandler(this.btnStolovi_Click);
             // 
             // ReservationMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 605);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnStolovi);
             this.Controls.Add(this.btnInformacije);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIzlaz);
@@ -145,6 +147,6 @@
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.ListBox lstRezervacije;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStolovi;
     }
 }

@@ -55,7 +55,7 @@ namespace sustav_za_rezervacije
             {
                 return false;
             }
-            using (StreamReader sr = File.OpenText($"{DataPath}/klasa.txt"))
+            using (StreamReader sr = File.OpenText($"{DataPath}/pozicija.txt"))
             {
                 string linija;
                 while ((linija = sr.ReadLine()) != null)
@@ -161,6 +161,18 @@ namespace sustav_za_rezervacije
 
             return true;
         }
+
+        public void AzurirajPodatke()
+        {
+            this.TablicaGosti = new Dictionary<int, Gost>();
+            this.TablicaKlasa = new Dictionary<int, string>();
+            this.TablicaPozicija = new Dictionary<int, string>();
+            this.TablicaRezervacija = new Dictionary<int, Rezervacija>();
+            this.TablicaRezervacijaGost = new Dictionary<(int, int), string>();
+            this.TablicaStolova = new Dictionary<int, Stol>();
+
+            this.UcitajPodatke();
+        }
     
         public List<Rezervacija> DohvatiRezervacije(DateTime pocetak, DateTime kraj)
         {
@@ -179,18 +191,7 @@ namespace sustav_za_rezervacije
 
         public List<Stol> DostupniStolovi(DateTime pocetak, DateTime kraj)
         {
-            List<Rezervacija> rezervacije = DohvatiRezervacije(pocetak, kraj);
-            List<Stol> povrat = new List<Stol>();
-
-            foreach (Stol s in TablicaStolova.Values)
-            {
-                if (!Rezervacija.SadrziStol(rezervacije, s))
-                {
-                    povrat.Add(s);
-                }
-            }
-
-            return povrat;
+            return this.Stolovi;
         }
 
         public List<Stol> Stolovi { get => this.TablicaStolova.Values.ToList(); }

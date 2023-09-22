@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Project.cs" />
     <Compile Include="StoredData\DataHandler.cs" />
     <Compile Include="Entities\Gost.cs" />
     <Compile Include="Entities\Rezervacija.cs" />
